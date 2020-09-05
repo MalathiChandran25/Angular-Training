@@ -1,0 +1,125 @@
+// click before enable input field
+.changeText {
+    span {
+        position: absolute;
+        top: 0;
+        font-size: 24px;
+    }
+    // .form-control {
+    //     display: none;
+    // }
+}
+
+// click after enable input field
+.noChangetext {
+    font-size: 16px;
+    // .form-control {
+    //     display: block;
+    // }
+}
+
+.login_label {
+    position: relative;
+    font-size: 16px;
+    line-height: 2rem;
+    width: 100%;
+    margin-bottom: 0px !important;
+}
+
+.form-group {
+    font-size: 16px;
+    font-weight: bold;
+    width: 50%;
+    margin: 0px;
+    border-bottom: 2px solid grey;
+    margin-top: 15px;
+    &__btn {
+        border: none;
+        margin: 50px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    &__login_link {
+        margin-top: 28px;
+        text-align: center;
+    }
+}
+
+.datepickerDiv {
+    display: flex;
+}
+
+.address {
+    width: 100%;
+}
+
+.form-control {
+    padding: 0px;
+    border: 0px;
+}
+
+.form-control,
+.form-control:focus,
+.form-control:active {
+    border: 0px;
+    outline: 0px;
+    padding: 0px;
+    box-shadow: none;
+}
+
+.formEdit {
+    padding: 50px;
+    padding-top: 20px;
+    margin-top: 40px;
+    margin: 30px 0px;
+    background: white;
+}
+
+.error {
+    color: red;
+}
+
+.footer {
+    background: grey;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 425px) {
+    .formEdit {
+        padding: 30px;
+        margin: 0 auto;
+    }
+    .form-group {
+        width: 100%;
+    }
+}
+
+.input-container {
+    position: relative;
+    margin: 30px 0px;
+}
+
+input:focus~.floating-label,
+input:not(:focus):valid~.floating-label {
+    top: -10px;
+    left: 0px;
+    font-size: 16px;
+    opacity: 1;
+}
+
+.inputText {
+    background: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    font-size: 14px;
+    width: 410px;
+    padding: 15px 0px 2px 5px;
+}
+
+.floating-label {
+    position: absolute;
+    pointer-events: none;
+    font-size: 24px;
+    left: 0px;
+    top: 5px;
+    transition: 0.2s ease all;
+}

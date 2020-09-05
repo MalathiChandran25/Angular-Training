@@ -1,0 +1,85 @@
+<div class="formEdit">
+    <form [formGroup]="studenteditForm" (ngSubmit)="onSave()" #myform="ngForm">
+        <div class="form-group ">
+            <label class="login_label" [ngClass]="(studenteditForm.get( 'Name').touched && studenteditForm.get( 'Name').invalid )? 'changeText': 'noChangetext'">
+            <span >Student Name </span>
+            <input type=" text " name="Name " formControlName="Name" class="form-control ">
+        </label>
+        </div>
+        <div *ngIf="studenteditForm.get('Name').touched && studenteditForm.get( 'Name').invalid " class="error ">
+            <div *ngIf="studenteditForm.get('Name').errors.required ">Name is required.</div>
+        </div>
+        <div class="form-group">
+            <label class="login_label " [ngClass]="(studenteditForm.get( 'Class').touched && studenteditForm.get( 'Class').invalid )? 'changeText': 'noChangetext'">
+        <span>Class</span>
+        <input type=" class " name="Class " formControlName="Class" class="form-control ">
+        </label>
+        </div>
+        <div *ngIf="studenteditForm.get( 'Class').touched && studenteditForm.get( 'Class').invalid " class="error ">
+            <div *ngIf="studenteditForm.get( 'Class').errors.required ">Class is required.</div>
+        </div>
+        <div class="form-group">
+            <label class="login_label " [ngClass]="(studenteditForm.get( 'Division').touched && studenteditForm.get( 'Division').invalid )? 'changeText': 'noChangetext'">
+        <span>Division</span>
+        <input type="text " name="Division " formControlName="Division" class="form-control ">
+        </label>
+        </div>
+        <div *ngIf="studenteditForm.get( 'Division').touched && studenteditForm.get( 'Division').invalid " class="error ">
+            <div *ngIf="studenteditForm.get( 'Division').errors.required ">Division is required.</div>
+        </div>
+        <div class="form-group">
+            <label class="login_label" [ngClass]="(studenteditForm.get( 'Rank').touched && studenteditForm.get( 'Rank').invalid )? 'changeText': 'noChangetext'">
+        <span>Rank</span>
+        <input type="text " name="Rank" formControlName="Rank" class="form-control ">
+        </label>
+        </div>
+        <div *ngIf="studenteditForm.get( 'Rank').touched && studenteditForm.get( 'Rank').invalid " class="error ">
+            <div *ngIf="studenteditForm.get( 'Rank').errors.required ">Rank is required.</div>
+        </div>
+        <div class="form-group ">
+            <label class="login_label" [ngClass]="(studenteditForm.get( 'Fee').touched && studenteditForm.get( 'Fee').invalid )? 'changeText': 'noChangetext'">
+        <span>Fees</span>
+        <input type="text " name="Fee" formControlName="Fee" class="form-control ">
+        </label>
+        </div>
+        <div *ngIf="studenteditForm.get( 'Fee').touched && studenteditForm.get( 'Fee').invalid " class="error ">
+            <div *ngIf="studenteditForm.get( 'Fee').errors.required ">Fee is required.</div>
+        </div>
+        <div class="form-group ">
+            <label class="login_label " [ngClass]="(studenteditForm.get( 'DueDate').touched && studenteditForm.get( 'DueDate').invalid )? 'changeText': 'noChangetext'">
+                <span>Due Date</span>
+                <!--<input type="date" name="Duedate " formControlName="DueDate" class="form-control ">-->
+                <div class="datepickerDiv">
+                <input matInput [matDatepicker]="picker" placeholder="dd-mm-yyyy" formControlName="DueDate" class="form-control ">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </div>
+            </label>
+        </div>
+        <div *ngIf="studenteditForm.get( 'DueDate').touched && studenteditForm.get( 'DueDate').invalid " class="error ">
+            <div *ngIf="studenteditForm.get( 'DueDate').errors.required ">DueDate is required.</div>
+        </div>
+        <div class="form-group ">
+            <label class="login_label " [ngClass]="(studenteditForm.get( 'ContactNo').touched && studenteditForm.get( 'ContactNo').invalid )? 'changeText': 'noChangetext'">
+        <span>Contact No</span>
+        <input type="text " name="ContactNo " [pattern]="mobNumberPattern" formControlName="ContactNo" class="form-control ">
+        </label>
+        </div>
+        <div *ngIf="studenteditForm.get( 'ContactNo').touched && studenteditForm.get( 'ContactNo').invalid " class="error ">
+            <div *ngIf="studenteditForm.get( 'ContactNo').errors.required ">ContactNo is required.</div>
+            <div *ngIf="studenteditForm.get( 'ContactNo').errors.pattern">Mobile number not valid.</div>
+        </div>
+        <div class="form-group address ">
+            <label class="login_label " [ngClass]="(studenteditForm.get( 'Address').touched && studenteditForm.get( 'Address').invalid )? 'changeText': 'noChangetext'">
+        <span>Address</span>
+        <input type="textfield " name="Address " formControlName="Address" class="form-control ">
+        </label>
+        </div>
+        <div *ngIf="studenteditForm.get( 'Address').touched && studenteditForm.get( 'Address').invalid " class="error ">
+            <div *ngIf="studenteditForm.get( 'Address').errors.required ">Address is required.</div>
+        </div>
+    </form>
+</div>
+<!--<div class="footer ">
+    <button type="submit " class="login-btn ">Login</button>
+</div>-->

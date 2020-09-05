@@ -1,0 +1,10 @@
+.main {
+  background: transparent linear-gradient(90deg, #6A11CB 0%, #424CE8 59%, #3F50EA 63%, #2575FC 100%) 0% 0% no-repeat padding-box;
+  min-height: 100vh;
+}
+
+@media only screen and (max-width: 768px) {
+  .head {
+    padding: 0px 100px;
+  }
+}

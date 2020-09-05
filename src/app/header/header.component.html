@@ -1,0 +1,10 @@
+<header class="head contain">
+    <h3 class="head__h3">
+        Students
+    </h3>
+    <div class="head__btn">
+        <button class="head__btn-style" *ngIf="profileName == ''" (click)="onClick()">LOGIN</button>
+        <button class=" head__btn-style signup " *ngIf="profileName=='' " (click)=" onSignUp() ">SIGNUP</button>
+        <button class="head__profileName" *ngIf="profileName !='' ">{{profileName}}</button>
+    </div>
+</header>

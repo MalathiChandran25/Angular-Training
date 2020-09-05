@@ -1,0 +1,25 @@
+<section class="contain">
+    <div *ngIf="studentdatalist?.length > 0;else elseBlock">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Registration No</th>
+                    <th>Class</th>
+                    <th colspan="2">Grade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let student of studentdatalist; index as i " [ngClass]="(i%2==0)? 'table__tr-oddrow':'table__tr-evenrow'">
+                    <td>{{student.Name}}</td>
+                    <td>{{student.RegestrationNo}}</td>
+                    <td>{{student.Class}}</td>
+                    <td>{{student.Rank}}</td>
+                    <td (click)="onSubmit(student)" class="table__td-image"><img src=" /assets/rightArrow.png" class="arrow_img" title="rightarrow" alt="rigtharrowImg"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <ng-template #elseBlock>No Data Found on th Student Table</ng-template>
+    <router-outlet></router-outlet>
+</section>

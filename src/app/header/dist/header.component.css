@@ -1,0 +1,77 @@
+.head {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+}
+.head__h3 {
+  padding: 10px;
+  margin-bottom: 0px;
+  margin-top: 10px;
+  color: #707070;
+}
+.head__btn {
+  margin: 10px 20px;
+}
+.head__btn-style {
+  font: Italic 14px/16px Roboto;
+  color: #36F498;
+  text-transform: uppercase;
+  opacity: 1;
+  padding: 10px;
+  border-radius: 4px;
+  background: #FFFFFF padding-box;
+  margin: 0px 10px;
+}
+.head__btn .signup {
+  color: #11B9F0;
+}
+.head button:focus {
+  outline: none;
+}
+.head__profileName {
+  padding: 5px;
+  background: none;
+  color: white;
+  font-size: 20px;
+  outline: none;
+  border: none;
+  margin-top: 5px;
+}
+
+.contain {
+  padding: 0px 100px;
+  margin: 0 auto;
+}
+
+.modal-dialog {
+  max-width: 733px;
+  margin: 100px auto;
+}
+
+.close_btn {
+  float: right;
+  margin: 20px 10px 0px 0px;
+  background: none;
+  /* outline: none; */
+  border: 0px;
+}
+
+.modal_title {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 40px;
+}
+
+.modal-body {
+  padding: 50px 75px;
+}
+
+@media only screen and (max-width: 425px) {
+  .contain {
+    padding: 0px;
+  }
+
+  .head__h3 {
+    margin-left: 10px;
+  }
+}
