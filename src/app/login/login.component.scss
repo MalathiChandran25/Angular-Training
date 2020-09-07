@@ -1,0 +1,121 @@
+.form-group {
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    margin: 0px;
+    border-bottom: 2px solid grey;
+    margin-top: 30px;
+    &__btn {
+        border: none;
+        // margin: 50px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+}
+
+// click before enable input field
+.clickText {
+    font-size: 24px;
+    .form-control {
+        display: none;
+    }
+}
+
+// click after enable input field
+.typeText {
+    font-size: 16px;
+    .form-control {
+        display: block;
+    }
+}
+
+.login_label {
+    width: 100%;
+}
+
+.changepassword {
+    margin-top: 50px;
+    color: #6A11CB;
+    cursor: pointer;
+}
+
+.login-btn {
+    background: transparent linear-gradient(90deg, #6A11CB 0%, #424CE8 59%, #3F50EA 63%, #2575FC 100%) 0% 0% no-repeat padding-box;
+    width: 115px;
+    border-radius: 4px;
+    height: 40px;
+    /* outline: none; */
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+button:disabled {
+    background: grey;
+}
+
+button[aria-label="Close"]:focus {
+    outline: none;
+}
+
+.changepassword a {
+    cursor: pointer;
+}
+
+.error_mgs {
+    color: red;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.form-control,
+.form-control:focus,
+.form-control:active {
+    border: 0px;
+    outline: 0px;
+    padding: 0px;
+    box-shadow: none;
+}
+
+.close_btn {
+    float: right;
+    margin: 20px 10px 0px 0px;
+    background: none;
+    /* outline: none; */
+    border: 0px;
+}
+
+// .modal_title {
+//     text-align: center;
+//     margin-top: 50px;
+//     font-size: 40px;
+// }
+// .modal-body {
+//     padding: 50px 75px;
+// }
+//modal scss
+::ng-deep .modal-dialog {
+    // margin-top: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+::ng-deep .modal-content {
+    margin-top: 50px;
+}
+
+.modal_header {
+    text-align: center;
+}
+
+.modal_title {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 40px;
+    display: inline-block;
+}
+
+.modal-body {
+    padding: 50px 75px;
+}

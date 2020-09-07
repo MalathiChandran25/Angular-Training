@@ -1,0 +1,57 @@
+.head {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    &__h3 {
+        padding: 10px;
+        margin-bottom: 0px;
+        margin-top: 10px;
+        color: #707070;
+    }
+    &__btn {
+        margin: 10px 20px;
+        &-style {
+            font: Italic 14px/16px Roboto;
+            color: #36F498;
+            text-transform: uppercase;
+            opacity: 1;
+            padding: 10px;
+            border-radius: 4px;
+            background: #FFFFFF padding-box;
+            margin: 0px 10px;
+        }
+        .signup {
+            color: #11B9F0;
+        }
+    }
+    button:focus {
+        outline: none;
+    }
+    &__profileName {
+        padding: 5px;
+        background: none;
+        color: white;
+        font-size: 20px;
+        outline: none;
+        border: none;
+        margin-top: 5px;
+    }
+}
+
+.contain {
+    padding: 0px 100px;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width:425px) {
+    .contain {
+        padding: 0px;
+    }
+    .head {
+        &__h3 {
+            margin-left: 10px;
+        }
+    }
+}
+
+//new modal scss

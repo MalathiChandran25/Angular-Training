@@ -1,0 +1,58 @@
+<div class="modal_header">
+    <h4 class="modal_title">SignUp </h4>
+    <button type="button" class="close_btn" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        <span><img src="../../assets/cancel.svg "></span>
+</button>
+</div>
+<div class="modal-body">
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" #myform="ngForm">
+        <div class="form-group">
+            <label class="label" (click)="displayNameField()" [ngClass]="(nameValue)? 'typeText':'clickText'">
+            User Name <br>
+            <input type="text" name="name" formControlName="name" class="form-control">
+            </label>
+        </div>
+        <div *ngIf="signupForm.get('name').touched && signupForm.get('name').invalid" class="error">
+            <div *ngIf="signupForm.get('name').required">name is required.</div>
+        </div>
+        <div class="form-group">
+            <label class="label" (click)="displayEmailField()" [ngClass]="(emailValue)? 'typeText':'clickText'">
+            Email <br>
+            <input type="text" name="email" formControlName="email" class="form-control">
+            </label>
+        </div>
+        <div *ngIf="signupForm.get('email').touched && signupForm.get('email').invalid" class="error">
+            <div *ngIf="signupForm.get('email').errors.required">Email is required.</div>
+            <div *ngIf="signupForm.get('email').errors.email">Please, enter valid email address.</div>
+        </div>
+
+        <div class="form-group" (click)="displayPasswordField()" [ngClass]="(passwordValue)? 'typeText':'clickText'">
+            <label class="label">
+            Password<br>
+            <input type="password" name="password" formControlName="password" class="form-control">
+            </label>
+        </div>
+        <div *ngIf="signupForm.get('password').touched && signupForm.get('password').invalid" class="error">
+            <div *ngIf="signupForm.get('password').errors.required">password is required.</div>
+        </div>
+        <div class="form-group">
+            <label class="label" (click)="displayRoleField()" [ngClass]="(roleValue)? 'typeText':'clickText'">
+            role<br>
+            <select formControlName="role" class="form-control">
+                    <option>Choose role</option>
+                    <option *ngFor="let role of roleList">{{role}}</option>
+                </select>
+            </label>
+        </div>
+        <div class="check_terms">
+            <input type="checkbox" formControlName="checkTerms">
+            <label class="check_terms__label">I read and agree to <a href="#">Terms and Condition</a></label>
+        </div>
+        <div class="form-group__btn">
+            <button type="submit " [disabled]="signupForm.invalid || signupForm.get('checkTerms').value != true" class="signup-btn" (click)="onSubmit() ">Signup</button>
+        </div>
+        <div class="form-group__login_link ">
+            <label>Already have an account? <span class="login_link " (click)="onGotoLogin() ">Login</span></label>
+        </div>
+    </form>
+</div>

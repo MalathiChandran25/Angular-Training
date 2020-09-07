@@ -1,0 +1,40 @@
+<!--[ngClass]="studentdata != true? 'contain' : 'nopadding'"-->
+<!--<button (click)="goBack()" class="back_btn" *ngIf="studentdata != true">
+        <img src="../../assets/back_icon.png" class="back_icon_img" title="back_icon" alt="back_icon">
+        back
+    </button>-->
+<div class="card">
+    <h2 class="card__title">Student Details
+        <span (click)="onGoto()" *ngIf="!hiddenIcon"><img src="../../assets/edit_icon.svg" class="edit_icon_img" title="edit_icon" alt="edit_icon"></span>
+    </h2>
+    <div class="card__body">
+        <div class="row">
+            <div class="col-sm-3 title">Student Name</div>
+            <div class="col-sm-3 data">{{studentdetails?.Name || no_value}}</div>
+            <div class="col-sm-3 title">Fees</div>
+            <div class="col-sm-3 data">{{studentdetails?.Fee || no_value}}</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3 title">Class</div>
+            <div class="col-sm-3 data">{{studentdetails?.Class || no_value}}</div>
+            <div class="col-sm-3 title">Due Date</div>
+            <div class="col-sm-3 data">{{studentdetails?.DueDate || no_value}}</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3 title">Division</div>
+            <div class="col-sm-3 data">{{studentdetails?.Division || no_value}}</div>
+            <div class="col-sm-3 title">Contact No.</div>
+            <div class="col-sm-3 data">{{studentdetails?.ContactNo || no_value}}</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3 title">Rank</div>
+            <div class="col-sm-3 data">{{studentdetails?.Rank || no_value}}</div>
+            <div class="col-sm-3 title">Address</div>
+            <div class="col-sm-3 data">
+                <address class="line_ellipsis">
+                    {{studentdetails?.Address || no_value}}
+                </address>
+            </div>
+        </div>
+    </div>
+</div>

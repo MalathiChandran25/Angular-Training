@@ -1,0 +1,37 @@
+<section>
+    <div class="btn-back contain">
+        <button (click)="goBack(optionBack,stepper)" class="backBtn">
+    <img src="../../assets/back_icon.png" class="backBtn__img" title="back_icon" alt="back_icon">
+    back
+    </button>
+    </div>
+    <mat-horizontal-stepper #stepper linear>
+        <ng-container *ngFor="let labels of labelstepperList;index as i">
+            <mat-icon>done</mat-icon>
+            <mat-step label={{labels}}>
+                <div class="heading">
+                    <h3 class="heading__title " *ngIf="labels != 'Summary'">Student Details</h3>
+                    <h3 class="heading__title " *ngIf="labels == 'Summary'">Success</h3>
+                    <p class="heading__info " *ngIf="labels == 'Student Details'">Please fill the following details</p>
+                    <p class="heading__info " *ngIf="labels == 'Verify'">Please verify the Student details</p>
+                    <p class="heading__info " *ngIf="labels == 'Summary'">Successfully changed the following student details</p>
+                </div>
+                <div class="content" *ngIf="labels == 'Student Details'">
+                    <app-studenteditform [studentdataid]="studentId" (changeButton)="ButtonWithEnable($event)"></app-studenteditform>
+                </div>
+                <div class="content" *ngIf="labels == 'Verify'">
+                    <app-student-card [studentdata]="studentValue" [steppervariable]="stepper"></app-student-card>
+                </div>
+                <div class="content" *ngIf="labels == 'Summary'">
+                    <app-student-card [studentdata]="studentValue" [hiddenIcon]="hiddenEditIcon"></app-student-card>
+                </div>
+                <div class="footer">
+                    <button class="footer__btn" type="reset" *ngIf="labels == 'Student Details'">Cancel</button>
+                    <button class="footer__btn" type="submit" *ngIf="labels == 'Student Details'" (click)="onSubmit(stepper)" [ngClass]="enable? 'disableBtn': 'enableBtn'" matStepperNext>Continue</button>
+                    <button class="footer__btn disableBtn" type="submit" *ngIf="labels == 'Verify'" (click)="onNext()" matStepperNext>Submit</button>
+                    <button class="footer__btn disableBtn" type="submit" *ngIf="labels == 'Summary'" (click)="onFinish()">Done</button>
+                </div>
+            </mat-step>
+        </ng-container>
+    </mat-horizontal-stepper>
+</section>
