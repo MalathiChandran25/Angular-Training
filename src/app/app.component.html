@@ -1,0 +1,11 @@
+<app-header></app-header>
+<main class="main">
+    <a routerLink="/studentlist"></a>
+    <!--<section class="section container">-->
+    <!--<app-student-details [studentdatalist]="studentdatalist" (selectedstudent)="selectedstudentdata($event)"></app-student-details>
+        <div *ngIf="studentdata" class="section__card">
+            <app-student-card [studentcarddetails]="studentdata"></app-student-card>
+        </div>-->
+    <router-outlet></router-outlet>
+    <!--</section>-->
+</main>

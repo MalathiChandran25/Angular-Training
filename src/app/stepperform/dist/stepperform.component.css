@@ -1,0 +1,22 @@
+.backBtn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.backBtn__img {
+    width: 30px;
+    vertical-align: text-bottom;
+}
+
+.mat-horizontal-stepper-header-container {
+    background: transparent linear-gradient(90deg, #1CE5BF 0%, #2E9CCA 100%);
+    padding: 0px 100px;
+}
+
+.mat-horizontal-stepper {
+    background: transparent linear-gradient(90deg, #1CE5BF 0%, #2E9CCA 100%);
+    width: 70%;
+}

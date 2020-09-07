@@ -1,0 +1,104 @@
+$white:#FFFFFF;
+$gray:#F2F2F2;
+$black: #000000;
+$blue :#2E9CCA;
+.contain {
+    width: 100%;
+    padding: 50px 80px;
+    margin: 0 auto;
+}
+
+.table {
+    padding: 20px;
+    text-align: left;
+    border: 0;
+    margin: 0 auto;
+    padding: 20px 10px;
+    font-size: 24px;
+    font-family: Helvetica Neue;
+    &__tr-oddrow {
+        background-color: $white;
+        color: $black;
+        border: 0px;
+    }
+    &__tr-evenrow {
+        background-color: $gray;
+        color: $black;
+        border: 0px;
+    }
+    &__td {
+        &-image {
+            cursor: pointer;
+            width: 45px;
+        }
+    }
+    td {
+        vertical-align: unset;
+    }
+    thead {
+        background: $black;
+        color: $blue;
+        border: 0px;
+        th {
+            border-top: 0px;
+            padding: 20px 10px;
+            font-size: 24px;
+            font-family: Helvetica Neue;
+        }
+    }
+}
+
+.arrow_img {
+    width: 2rem;
+    padding: 0px;
+}
+
+@media only screen and (min-width: 375px) and (max-width: 475px) {
+    .contain {
+        padding: 10px;
+    }
+    .table {
+        padding: 0px;
+        font-size: 16px;
+        thead {
+            border: 0px;
+            th {
+                border-top: 0px;
+                padding: 0.75rem 5px;
+                font-size: 18px;
+                font-family: Helvetica Neue;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 375px) {
+    .contain {
+        padding: 5px;
+    }
+    .table {
+        padding: 0px;
+        tbody {
+            tr {
+                padding: 0px;
+                font-size: 16px;
+                td {
+                    padding: 0.75rem 5px;
+                }
+            }
+        }
+        thead {
+            border: 0px;
+            th {
+                border-top: 0px;
+                padding: 0.75rem 5px;
+                font-size: 16px;
+                font-family: Helvetica Neue;
+            }
+        }
+    }
+    .arrow_img {
+        width: 1.5rem;
+        padding: 0px;
+    }
+}
